@@ -14,6 +14,21 @@
                     "inline": false
                 }
             }
+        },
+        {
+            "name": "dex-v8-simple-fees",
+            "path": "./src/dex-v8-simple-fees.tact",
+            "output": "./output",
+            "mode": "full",
+            "options": {
+                "external": false,
+                "debug": true,
+                "ipfsAbiGetter": false,
+                "interfacesGetter": false,
+                "experimental": {
+                    "inline": false
+                }
+            }
         }
     ]
 }
