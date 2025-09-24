@@ -1,0 +1,20 @@
+{
+  "contracts": {
+    "taxstr": {
+      "address": "EQCnvbgNWGJmKsb_3DPalWzBJ4Uie7mVfo1DQ5ERtSvMtzvf",
+      "name": "TaxJettonMaster",
+      "pkgFile": "output/tax-jetton_TaxJettonMaster.pkg",
+      "sourceFile": "src/main.tact",
+      "compiler": "Tact"
+    },
+    "dex": {
+      "address": "EQDP7MtKWvOgzOUWE0XDAMgKEQoQRE7gqqYN_Nbjh0sFtLAS",
+      "name": "SmartTAXSDEX",
+      "pkgFile": "output/dex-v8-simple-fees_SmartTAXSDEX.pkg",
+      "sourceFile": "src/dex-v8-simple-fees.tact",
+      "compiler": "Tact"
+    }
+  },
+  "verificationUrl": "https://verifier.ton.org",
+  "timestamp": "2025-09-22T21:34:59.391Z"
+}

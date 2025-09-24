@@ -10,7 +10,22 @@
         "test:sandbox": "npm run build && jest taxstr-sandbox.test.ts",
         "test:dex-sandbox": "npm run build && jest dex-v8-sandbox.test.ts",
         "test:all-sandbox": "npm run build && jest *-sandbox.test.ts",
-        "generate-wallet": "ts-node generate-wallet.ts"
+        "generate-wallet": "ts-node generate-wallet.ts",
+        "deploy-taxstr": "npm run build && ts-node deploy-taxstr-testnet.ts",
+        "deploy-dex": "npm run build && ts-node deploy-dex-testnet.ts",
+        "mint-taxstr": "npm run build && ts-node mint-taxstr-testnet.ts",
+        "transfer-taxstr": "npm run build && ts-node transfer-taxstr-testnet.ts",
+        "seed-dex": "npm run build && ts-node seed-dex-testnet.ts",
+        "buy-from-dex": "npm run build && ts-node buy-from-dex-testnet.ts",
+        "check-dex-state": "npm run build && ts-node check-dex-state-testnet.ts",
+        "set-dex-wallet": "npm run build && ts-node set-dex-wallet-testnet.ts",
+        "sell-to-dex": "npm run build && ts-node sell-to-dex-testnet.ts",
+        "analyze-prices": "npm run build && ts-node analyze-price-changes-testnet.ts",
+        "view-api-docs": "cat API_DESIGN.md",
+        "send-ton-treasury": "ts-node send-ton-to-treasury.ts",
+        "update-metadata": "npm run build && ts-node update-metadata-testnet.ts",
+        "check-metadata": "npm run build && ts-node check-working-metadata.ts",
+        "prepare-verification": "ts-node prepare-verification.ts"
     },
     "devDependencies": {
         "@nowarp/misti": "~0.8.1",

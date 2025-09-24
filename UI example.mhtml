@@ -1,0 +1,509 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://localhost:3000/
+Subject: TAXSTR DEX - Sandbox Interface
+Date: Mon, 22 Sep 2025 17:42:32 -0400
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--3e2dWMgFBBKtUISqmGLSkNT3vlspy1j5NHotvZR00b----"
+
+
+------MultipartBoundary--3e2dWMgFBBKtUISqmGLSkNT3vlspy1j5NHotvZR00b----
+Content-Type: text/html
+Content-ID: <frame-122DE38522F69CEB69E8F63BC70837B7@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://localhost:3000/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>TAXSTR DEX - Sandbox Interface</title>
+    <link rel=3D"stylesheet" href=3D"http://localhost:3000/styles.css">
+   =20
+</head>
+<body>
+    <div class=3D"container">
+        <header>
+            <h1>=F0=9F=AA=99 TAXSTR DEX</h1>
+            <p>Sandbox Trading Interface</p>
+            <div class=3D"status-indicator connected" id=3D"connectionStatu=
+s">
+                <span class=3D"dot"></span>
+                <span id=3D"statusText">Connected to sandbox</span>
+            </div>
+        </header>
+
+        <div class=3D"wallet-selector">
+            <h2>Select Wallet</h2>
+            <div class=3D"wallet-buttons">
+                <button id=3D"treasuryBtn" class=3D"wallet-btn active">
+                    =F0=9F=8F=9B=EF=B8=8F Treasury
+                </button>
+                <button id=3D"user1Btn" class=3D"wallet-btn">
+                    =F0=9F=91=A4 User1
+                </button>
+                <button id=3D"user2Btn" class=3D"wallet-btn">
+                    =F0=9F=91=A4 User2
+                </button>
+            </div>
+        </div>
+
+        <div class=3D"main-content">
+            <div class=3D"left-panel">
+                <!-- Balances Section -->
+                <div class=3D"card">
+                    <h3>=F0=9F=92=B0 Wallet Balances</h3>
+                    <div class=3D"wallet-info">
+                        <div class=3D"wallet-address">
+                            <span id=3D"currentWalletName">Treasury</span>
+                            <code id=3D"currentWalletAddress">Loading...</c=
+ode>
+                        </div>
+                    </div>
+                    <div class=3D"balance-grid">
+                        <div class=3D"balance-item">
+                            <span class=3D"balance-label">TON Balance</span=
+>
+                            <span class=3D"balance-value" id=3D"tonBalance"=
+>Error</span>
+                        </div>
+                        <div class=3D"balance-item">
+                            <span class=3D"balance-label">TAXSTR Balance</s=
+pan>
+                            <span class=3D"balance-value" id=3D"taxstrBalan=
+ce">Error</span>
+                        </div>
+                    </div>
+                    <button class=3D"refresh-btn" id=3D"refreshBalances">=
+=F0=9F=94=84 Refresh</button>
+                </div>
+
+                <!-- Market Info Section -->
+                <div class=3D"card">
+                    <h3>=F0=9F=93=8A Market Information</h3>
+                    <div class=3D"market-grid">
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">Total Supply</span=
+>
+                            <span class=3D"market-value" id=3D"totalSupply"=
+></span>
+                        </div>
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">Current Price</spa=
+n>
+                            <span class=3D"market-value" id=3D"currentPrice=
+">undefined TON</span>
+                        </div>
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">Market Cap</span>
+                            <span class=3D"market-value" id=3D"marketCap"><=
+/span>
+                        </div>
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">DEX Reserve</span>
+                            <span class=3D"market-value" id=3D"dexReserve">=
+</span>
+                        </div>
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">DEX TON</span>
+                            <span class=3D"market-value" id=3D"dexTon">unde=
+fined TON</span>
+                        </div>
+                        <div class=3D"market-item">
+                            <span class=3D"market-label">Total Fees</span>
+                            <span class=3D"market-value" id=3D"totalFees">u=
+ndefined TON</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treasury Actions -->
+                <div class=3D"card treasury-only">
+                    <h3>=F0=9F=8F=9B=EF=B8=8F Treasury Actions</h3>
+                    <div class=3D"action-group">
+                        <label>Mint TAXSTR</label>
+                        <div class=3D"input-group">
+                            <input type=3D"number" id=3D"mintAmount" placeh=
+older=3D"Amount (millions)" min=3D"1">
+                            <span class=3D"input-suffix">M</span>
+                        </div>
+                        <button class=3D"action-btn primary" id=3D"mintBtn"=
+>
+                            =F0=9F=AA=99 Mint Tokens
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class=3D"right-panel">
+                <!-- DEX Trading Section -->
+                <div class=3D"card">
+                    <h3>=F0=9F=94=84 DEX Trading</h3>
+                   =20
+                    <div class=3D"trading-tabs">
+                        <button class=3D"tab-btn active" id=3D"buyTab">Buy =
+TAXSTR</button>
+                        <button class=3D"tab-btn" id=3D"sellTab">Sell TAXST=
+R</button>
+                    </div>
+
+                    <!-- Buy Panel -->
+                    <div class=3D"trading-panel" id=3D"buyPanel">
+                        <div class=3D"trade-input">
+                            <label>Pay with TON</label>
+                            <div class=3D"input-group">
+                                <input type=3D"number" id=3D"buyAmount" pla=
+ceholder=3D"0.1" step=3D"0.1" min=3D"0.1">
+                                <span class=3D"input-suffix">TON</span>
+                            </div>
+                        </div>
+                        <div class=3D"trade-preview">
+                            <div class=3D"preview-item">
+                                <span>You'll receive</span>
+                                <span id=3D"buyPreview">0 TAXSTR</span>
+                            </div>
+                            <div class=3D"preview-item">
+                                <span>Price impact</span>
+                                <span id=3D"buyPriceImpact">0%</span>
+                            </div>
+                            <div class=3D"preview-item efficiency-warning" =
+id=3D"buyEfficiency" style=3D"display: none;">
+                                <span>Transfer efficiency</span>
+                                <span id=3D"buyEfficiencyValue">90%</span>
+                            </div>
+                        </div>
+                        <button class=3D"action-btn primary" id=3D"executeB=
+uy">
+                            =F0=9F=92=B0 Buy TAXSTR
+                        </button>
+                    </div>
+
+                    <!-- Sell Panel -->
+                    <div class=3D"trading-panel hidden" id=3D"sellPanel">
+                        <div class=3D"trade-input">
+                            <label>Sell TAXSTR</label>
+                            <div class=3D"input-group">
+                                <input type=3D"number" id=3D"sellAmount" pl=
+aceholder=3D"1000" step=3D"1000" min=3D"1000">
+                                <span class=3D"input-suffix">TAXSTR</span>
+                            </div>
+                        </div>
+                        <div class=3D"trade-preview">
+                            <div class=3D"preview-item">
+                                <span>You'll receive</span>
+                                <span id=3D"sellPreview">0 TON</span>
+                            </div>
+                            <div class=3D"preview-item">
+                                <span>Price impact</span>
+                                <span id=3D"sellPriceImpact">0%</span>
+                            </div>
+                            <div class=3D"preview-item tax-warning" id=3D"s=
+ellTax" style=3D"display: none;">
+                                <span>Transfer tax (10%)</span>
+                                <span id=3D"sellTaxValue">100 TAXSTR</span>
+                            </div>
+                        </div>
+                        <button class=3D"action-btn primary" id=3D"executeS=
+ell">
+                            =F0=9F=92=B8 Sell TAXSTR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Transaction History -->
+                <div class=3D"card">
+                    <h3>=F0=9F=93=9C Recent Transactions</h3>
+                    <div class=3D"transaction-list" id=3D"transactionList">=
+<div class=3D"no-transactions">No transactions yet. Start trading!</div></d=
+iv>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Chart -->
+        <div class=3D"chart-container">
+            <div class=3D"card">
+                <h3>=F0=9F=93=88 Price Chart</h3>
+                <canvas id=3D"priceChart" width=3D"2620" height=3D"700" sty=
+le=3D"display: block; box-sizing: border-box; height: 350px; width: 1310px;=
+"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class=3D"loading-overlay" id=3D"loadingOverlay">
+        <div class=3D"loading-spinner"></div>
+        <div class=3D"loading-text">Processing transaction...</div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class=3D"toast-container" id=3D"toastContainer"></div>
+
+   =20
+
+
+</body></html>
+------MultipartBoundary--3e2dWMgFBBKtUISqmGLSkNT3vlspy1j5NHotvZR00b----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://localhost:3000/styles.css
+
+@charset "utf-8";
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, =
+Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, =
+rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%); min-height: 100vh; color: r=
+gb(51, 51, 51); }
+
+.container { max-width: 1400px; margin: 0px auto; padding: 20px; }
+
+header { text-align: center; margin-bottom: 30px; color: white; }
+
+header h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: rgba(0, 0,=
+ 0, 0.3) 2px 2px 4px; }
+
+header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 15px; }
+
+.status-indicator { display: inline-flex; align-items: center; gap: 8px; ba=
+ckground: rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 20px;=
+ backdrop-filter: blur(10px); }
+
+.status-indicator .dot { width: 8px; height: 8px; border-radius: 50%; backg=
+round: rgb(76, 175, 80); animation: 2s ease 0s infinite normal none running=
+ pulse; }
+
+.status-indicator.disconnected .dot { background: rgb(244, 67, 54); }
+
+.status-indicator.connecting .dot { background: rgb(255, 152, 0); }
+
+@keyframes pulse {=20
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.wallet-selector { margin-bottom: 30px; }
+
+.wallet-selector h2 { text-align: center; color: white; margin-bottom: 15px=
+; font-size: 1.5rem; }
+
+.wallet-buttons { display: flex; justify-content: center; gap: 15px; flex-w=
+rap: wrap; }
+
+.wallet-btn { background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(=
+255, 255, 255, 0.2); color: white; padding: 12px 24px; border-radius: 12px;=
+ cursor: pointer; font-size: 1rem; font-weight: 600; transition: 0.3s; back=
+drop-filter: blur(10px); }
+
+.wallet-btn:hover { background: rgba(255, 255, 255, 0.2); border-color: rgb=
+a(255, 255, 255, 0.4); transform: translateY(-2px); }
+
+.wallet-btn.active { background: linear-gradient(135deg, rgb(76, 175, 80), =
+rgb(69, 160, 73)); border-color: rgb(76, 175, 80); box-shadow: rgba(76, 175=
+, 80, 0.4) 0px 4px 15px; }
+
+.main-content { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; m=
+argin-bottom: 30px; }
+
+.card { background: rgba(255, 255, 255, 0.95); border-radius: 16px; padding=
+: 24px; box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 32px; backdrop-filter: blur(=
+10px); border: 1px solid rgba(255, 255, 255, 0.2); margin-bottom: 20px; }
+
+.card h3 { margin-bottom: 20px; color: rgb(51, 51, 51); font-size: 1.3rem; =
+display: flex; align-items: center; gap: 8px; }
+
+.treasury-only { display: none; }
+
+.treasury-only.visible { display: block; }
+
+.wallet-info { margin-bottom: 20px; }
+
+.wallet-address { display: flex; flex-direction: column; gap: 5px; }
+
+.wallet-address code { background: rgb(245, 245, 245); padding: 8px 12px; b=
+order-radius: 8px; font-size: 0.85rem; color: rgb(102, 102, 102); word-brea=
+k: break-all; }
+
+.balance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; m=
+argin-bottom: 20px; }
+
+.balance-item { display: flex; flex-direction: column; align-items: center;=
+ padding: 16px; background: linear-gradient(135deg, rgb(248, 249, 250), rgb=
+(233, 236, 239)); border-radius: 12px; border: 1px solid rgb(222, 226, 230)=
+; }
+
+.balance-label { font-size: 0.9rem; color: rgb(102, 102, 102); margin-botto=
+m: 8px; font-weight: 500; }
+
+.balance-value { font-size: 1.4rem; font-weight: 700; color: rgb(51, 51, 51=
+); }
+
+.market-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1=
+2px; }
+
+.market-item { display: flex; justify-content: space-between; align-items: =
+center; padding: 12px; background: rgb(248, 249, 250); border-radius: 8px; =
+border-left: 4px solid rgb(102, 126, 234); }
+
+.market-label { font-size: 0.9rem; color: rgb(102, 102, 102); font-weight: =
+500; }
+
+.market-value { font-weight: 700; color: rgb(51, 51, 51); }
+
+.refresh-btn, .action-btn { width: 100%; padding: 12px 20px; border: none; =
+border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; tr=
+ansition: 0.3s; display: flex; align-items: center; justify-content: center=
+; gap: 8px; }
+
+.refresh-btn { background: linear-gradient(135deg, rgb(108, 117, 125), rgb(=
+90, 98, 104)); color: white; margin-bottom: 10px; }
+
+.refresh-btn:hover { background: linear-gradient(135deg, rgb(90, 98, 104), =
+rgb(73, 80, 87)); transform: translateY(-1px); }
+
+.action-btn.primary { background: linear-gradient(135deg, rgb(0, 123, 255),=
+ rgb(0, 86, 179)); color: white; }
+
+.action-btn.primary:hover { background: linear-gradient(135deg, rgb(0, 86, =
+179), rgb(0, 64, 133)); transform: translateY(-1px); box-shadow: rgba(0, 12=
+3, 255, 0.3) 0px 4px 15px; }
+
+.action-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; =
+}
+
+.trading-tabs { display: flex; margin-bottom: 20px; background: rgb(248, 24=
+9, 250); border-radius: 10px; padding: 4px; }
+
+.tab-btn { flex: 1 1 0%; padding: 12px; border: none; background: transpare=
+nt; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.3s=
+; }
+
+.tab-btn.active { background: white; color: rgb(0, 123, 255); box-shadow: r=
+gba(0, 0, 0, 0.1) 0px 2px 8px; }
+
+.trading-panel { display: block; }
+
+.trading-panel.hidden { display: none; }
+
+.input-group { position: relative; margin-bottom: 15px; }
+
+.input-group input { width: 100%; padding: 14px 50px 14px 16px; border: 2px=
+ solid rgb(233, 236, 239); border-radius: 10px; font-size: 1rem; transition=
+: border-color 0.3s; }
+
+.input-group input:focus { outline: none; border-color: rgb(0, 123, 255); b=
+ox-shadow: rgba(0, 123, 255, 0.1) 0px 0px 0px 3px; }
+
+.input-suffix { position: absolute; right: 16px; top: 50%; transform: trans=
+lateY(-50%); color: rgb(102, 102, 102); font-weight: 600; pointer-events: n=
+one; }
+
+.action-group { margin-bottom: 20px; }
+
+.action-group label { display: block; margin-bottom: 8px; font-weight: 600;=
+ color: rgb(51, 51, 51); }
+
+.trade-preview { background: rgb(248, 249, 250); border-radius: 10px; paddi=
+ng: 16px; margin-bottom: 20px; }
+
+.preview-item { display: flex; justify-content: space-between; align-items:=
+ center; margin-bottom: 8px; }
+
+.preview-item:last-child { margin-bottom: 0px; }
+
+.preview-item span:first-child { color: rgb(102, 102, 102); font-size: 0.9r=
+em; }
+
+.preview-item span:last-child { font-weight: 600; color: rgb(51, 51, 51); }
+
+.efficiency-warning { background: rgb(255, 243, 205); border: 1px solid rgb=
+(255, 234, 167); border-radius: 6px; padding: 8px 12px; margin: 8px 0px; }
+
+.efficiency-warning span:last-child { color: rgb(133, 100, 4); }
+
+.tax-warning { background: rgb(248, 215, 218); border: 1px solid rgb(245, 1=
+94, 199); border-radius: 6px; padding: 8px 12px; margin: 8px 0px; }
+
+.tax-warning span:last-child { color: rgb(132, 32, 41); }
+
+.transaction-list { max-height: 300px; overflow-y: auto; }
+
+.transaction-item { display: flex; justify-content: space-between; align-it=
+ems: center; padding: 12px; margin-bottom: 8px; background: rgb(248, 249, 2=
+50); border-radius: 8px; border-left: 4px solid rgb(40, 167, 69); }
+
+.transaction-item.sell { border-left-color: rgb(220, 53, 69); }
+
+.transaction-item.mint { border-left-color: rgb(255, 193, 7); }
+
+.transaction-details { display: flex; flex-direction: column; gap: 4px; }
+
+.transaction-type { font-weight: 600; color: rgb(51, 51, 51); }
+
+.transaction-amount { font-size: 0.9rem; color: rgb(102, 102, 102); }
+
+.transaction-time { font-size: 0.8rem; color: rgb(153, 153, 153); }
+
+.no-transactions { text-align: center; color: rgb(102, 102, 102); font-styl=
+e: italic; padding: 20px; }
+
+.chart-container { margin-top: 20px; }
+
+.chart-container .card { height: 400px; }
+
+#priceChart { width: 100% !important; height: 300px !important; }
+
+.loading-overlay { position: fixed; top: 0px; left: 0px; width: 100%; heigh=
+t: 100%; background: rgba(0, 0, 0, 0.7); display: none; justify-content: ce=
+nter; align-items: center; z-index: 1000; backdrop-filter: blur(5px); }
+
+.loading-overlay.visible { display: flex; }
+
+.loading-spinner { width: 50px; height: 50px; border-width: 4px; border-sty=
+le: solid; border-color: white rgba(255, 255, 255, 0.3) rgba(255, 255, 255,=
+ 0.3); border-image: initial; border-radius: 50%; animation: 1s linear 0s i=
+nfinite normal none running spin; margin-bottom: 20px; }
+
+.loading-text { color: white; font-size: 1.1rem; font-weight: 600; }
+
+@keyframes spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.toast-container { position: fixed; top: 20px; right: 20px; z-index: 1001; =
+}
+
+.toast { background: rgb(51, 51, 51); color: white; padding: 16px 20px; bor=
+der-radius: 8px; margin-bottom: 10px; box-shadow: rgba(0, 0, 0, 0.3) 0px 4p=
+x 12px; transform: translateX(400px); transition: transform 0.3s; max-width=
+: 400px; }
+
+.toast.show { transform: translateX(0px); }
+
+.toast.success { background: rgb(40, 167, 69); }
+
+.toast.error { background: rgb(220, 53, 69); }
+
+.toast.warning { background: rgb(255, 193, 7); color: rgb(51, 51, 51); }
+
+@media (max-width: 768px) {
+  .main-content { grid-template-columns: 1fr; }
+  .wallet-buttons { flex-direction: column; align-items: center; }
+  .balance-grid { grid-template-columns: 1fr; }
+  .market-grid { grid-template-columns: 1fr; }
+  .container { padding: 15px; }
+  header h1 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 16px; }
+  .input-group input { padding: 12px 45px 12px 12px; }
+  .wallet-btn { padding: 10px 20px; font-size: 0.9rem; }
+}
+------MultipartBoundary--3e2dWMgFBBKtUISqmGLSkNT3vlspy1j5NHotvZR00b------
