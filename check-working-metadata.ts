@@ -145,3 +145,4 @@ checkWorkingMetadata()
         process.exit(1);
     });
 
+
